@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="508.0" prefWidth="961.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.controllers.studentController">
+   <children>
+      <TextField fx:id="txtdob" layoutX="111.0" layoutY="423.0" promptText="date of birth" />
+      <TextField fx:id="txtname" layoutX="110.0" layoutY="109.0" promptText="name" />
+      <TextField fx:id="txtphone" layoutX="111.0" layoutY="200.0" promptText="phone" />
+      <TextField fx:id="txtemail" layoutX="110.0" layoutY="240.0" promptText="email" />
+      <TextField fx:id="txtenroll" layoutX="112.0" layoutY="376.0" promptText="txtenroll" />
+      <ComboBox fx:id="comboaddress" layoutX="110.0" layoutY="152.0" prefWidth="150.0" promptText="address" />
+      <ComboBox fx:id="combogender" layoutX="111.0" layoutY="333.0" prefWidth="150.0" promptText="gender" />
+      <ComboBox fx:id="combobatch" layoutX="111.0" layoutY="287.0" prefWidth="150.0" promptText="batch code" />
+      <Button fx:id="btnsave" layoutX="299.0" layoutY="456.0" mnemonicParsing="false" onAction="#registerStudent" prefHeight="30.0" prefWidth="135.0" style="-fx-background-color: f79d65;" text="ADD" textFill="PEACHPUFF" />
+      <Pane layoutX="-2.0" layoutY="-6.0" prefHeight="76.0" prefWidth="971.0" style="-fx-background-color: f79d65;">
+         <children>
+            <Label layoutX="387.0" layoutY="23.0" text="Student Informations" textFill="PEACHPUFF">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="69.0" prefHeight="439.0" prefWidth="66.0" style="-fx-background-color: ffdab9;" />
+      <TableView fx:id="studentTable" layoutX="292.0" layoutY="108.0" onMouseClicked="#showclicked" prefHeight="336.0" prefWidth="661.0">
+        <columns>
+          <TableColumn fx:id="colname" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="coladdress" prefWidth="75.0" text="Address" />
+            <TableColumn fx:id="colphone" prefWidth="75.0" text="Phone" />
+            <TableColumn fx:id="colemail" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="colfaculty" prefWidth="75.0" text="Fuclty" />
+            <TableColumn fx:id="colgender" prefWidth="75.0" text="Gender" />
+            <TableColumn fx:id="colid" prefWidth="75.0" text="Id" />
+            <TableColumn fx:id="codDob" prefWidth="75.0" text="DOB" />
+        </columns>
+      </TableView>
+      <Button fx:id="btndelete" layoutX="648.0" layoutY="459.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: f79d65;" text="Delete" textFill="PEACHPUFF" />
+      <Button fx:id="btnupdate" layoutX="485.0" layoutY="458.0" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: f79d65;" text="Update" textFill="PEACHPUFF" />
+   </children>
+</AnchorPane>

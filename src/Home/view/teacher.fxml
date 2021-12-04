@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="507.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.controllers.teacherController">
+   <children>
+      <TextField fx:id="txtname" layoutX="154.0" layoutY="150.0" promptText="name" />
+      <TextField fx:id="txtaddress" layoutX="154.0" layoutY="230.0" promptText="address" />
+      <TextField fx:id="txtgender" layoutX="154.0" layoutY="297.0" promptText="gender" />
+      <TableView fx:id="teacherTable" layoutX="346.0" layoutY="147.0" onMouseClicked="#showcliced" prefHeight="238.0" prefWidth="467.0">
+        <columns>
+          <TableColumn fx:id="colname" prefWidth="115.0" text="name" />
+          <TableColumn fx:id="coladdress" prefWidth="96.0" text="address" />
+            <TableColumn fx:id="colgender" prefWidth="130.0" text="gender" />
+            <TableColumn fx:id="colsubject" prefWidth="125.0" text="subject" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnsave" layoutX="346.0" layoutY="406.0" mnemonicParsing="false" onAction="#save" prefHeight="38.0" prefWidth="135.0" style="-fx-background-color: f79d65;" text="ADD" textFill="PEACHPUFF" />
+      <Button fx:id="btndelete" layoutX="701.0" layoutY="406.0" mnemonicParsing="false" onAction="#delete" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: f79d65;" text="Delete" textFill="PEACHPUFF" />
+      <Button fx:id="btnupdate" layoutX="524.0" layoutY="406.0" mnemonicParsing="false" onAction="#update" prefHeight="38.0" prefWidth="111.0" style="-fx-background-color: f79d65;" text="Update" textFill="PEACHPUFF" />
+      <ComboBox fx:id="combosubject" layoutX="154.0" layoutY="353.0" prefWidth="150.0" promptText="subject" />
+      <Pane layoutY="-18.0" prefHeight="103.0" prefWidth="827.0" style="-fx-background-color: f79d65;">
+         <children>
+            <Label layoutX="275.0" layoutY="51.0" text="Teacher Informations" textFill="PEACHPUFF">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="-3.0" layoutY="83.0" prefHeight="427.0" prefWidth="92.0" style="-fx-background-color: ffdab9;" />
+   </children>
+</AnchorPane>

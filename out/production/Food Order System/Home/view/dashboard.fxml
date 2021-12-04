@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="txtusername" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="751.0" prefWidth="1206.0" style="-fx-background-color: #ffdab9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.controllers.DashboardController">
+   <children>
+      <Pane layoutX="30.0" layoutY="136.0" prefHeight="516.0" prefWidth="210.0" style="-fx-background-color: f79d65;">
+         <children>
+            <Button fx:id="btnHome" layoutX="87.0" layoutY="47.0" mnemonicParsing="false" onAction="#homeShow" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: #ffdab9;" text="Dashboard" />
+            <Button fx:id="btnNotification" layoutX="87.0" layoutY="306.0" mnemonicParsing="false" onAction="#showsubject" prefHeight="53.0" prefWidth="98.0" style="-fx-background-color: #ffdab9;" text="subject" />
+            <Button fx:id="btnCalendar" layoutX="87.0" layoutY="390.0" mnemonicParsing="false" onAction="#showattendance" prefHeight="53.0" prefWidth="98.0" style="-fx-background-color: #ffdab9;" text="Attendance" />
+            <Button fx:id="btnTechear" layoutX="87.0" layoutY="129.0" mnemonicParsing="false" onAction="#teacherShow" prefHeight="53.0" prefWidth="98.0" style="-fx-background-color: #ffdab9;" text="teacher" />
+            <Button fx:id="btnStudent" layoutX="87.0" layoutY="221.0" mnemonicParsing="false" onAction="#studentShow" prefHeight="53.0" prefWidth="98.0" style="-fx-background-color: #ffdab9;" text="student" />
+            <ImageView fitHeight="53.0" fitWidth="66.0" layoutX="14.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/icons8-dashboard-layout-24.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="66.0" layoutX="14.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/icons8-teacher-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="66.0" layoutX="14.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/icons8-student-male-30.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="66.0" layoutX="14.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/icons8-return-book-30.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="66.0" layoutX="14.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/icons8-attendance-80.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="-1.0" layoutY="-2.0" prefHeight="95.0" prefWidth="1206.0" style="-fx-background-color: f79d65;">
+         <children>
+            <Label layoutX="69.0" layoutY="22.0" prefHeight="47.0" prefWidth="189.0" text="DASHBOARD" textFill="PEACHPUFF">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="1157.0" layoutY="28.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/icons8-logout-rounded-down-50.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="263.0" layoutY="136.0" prefHeight="86.0" prefWidth="200.0" style="-fx-background-color: f79d65; -fx-background-radius: 50;">
+         <children>
+            <Label layoutX="84.0" layoutY="14.0" text="Total Students" textFill="PEACHPUFF">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblstudent" layoutX="122.0" layoutY="43.0" prefHeight="23.0" prefWidth="53.0" text="Label" textFill="PEACHPUFF">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="46.0" layoutX="28.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/icons8-student-male-30.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="571.0" layoutY="136.0" prefHeight="86.0" prefWidth="200.0" style="-fx-background-color: f79d65; -fx-background-radius: 50;">
+         <children>
+            <Label layoutX="81.0" layoutY="14.0" text="Total teacher" textFill="PEACHPUFF">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblteacher" layoutX="111.0" layoutY="43.0" prefHeight="23.0" prefWidth="53.0" text="Label" textFill="PEACHPUFF">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="46.0" layoutX="31.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/icons8-teacher-50.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="906.0" layoutY="136.0" prefHeight="86.0" prefWidth="200.0" style="-fx-background-color: f79d65; -fx-background-radius: 50;">
+         <children>
+            <Label layoutX="88.0" layoutY="17.0" text="Total Subjects" textFill="PEACHPUFF">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblsubject" layoutX="124.0" layoutY="49.0" prefHeight="23.0" prefWidth="53.0" text="Label" textFill="PEACHPUFF">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="46.0" layoutX="35.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/icons8-return-book-30.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <PieChart fx:id="pichart" layoutX="263.0" layoutY="252.0" prefHeight="400.0" prefWidth="819.0" style="-fx-background-color: f79d65; -fx-background-radius: 50;" />
+      <Label layoutX="391.0" layoutY="267.0" text="Attencence  Piechart" textFill="PEACHPUFF">
+         <font>
+            <Font name="Barlow Condensed Medium" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

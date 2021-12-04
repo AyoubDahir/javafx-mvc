@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="481.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.controllers.attendanceController">
+   <children>
+      <TextField fx:id="txtdate" layoutX="107.0" layoutY="131.0" promptText="date" />
+      <ComboBox fx:id="combostudent" layoutX="107.0" layoutY="196.0" prefWidth="150.0" promptText="stuent" />
+      <ComboBox fx:id="combosubject" layoutX="107.0" layoutY="263.0" prefWidth="150.0" promptText="subject" />
+      <ComboBox fx:id="combostatus" layoutX="107.0" layoutY="329.0" prefWidth="150.0" promptText="status" />
+      <TableView fx:id="attendanceTable" layoutX="280.0" layoutY="131.0" onMouseClicked="#showclicked" prefHeight="223.0" prefWidth="425.0">
+        <columns>
+          <TableColumn fx:id="coldate" prefWidth="75.0" text="Date" />
+          <TableColumn fx:id="coldstudent" prefWidth="141.0" text="Student" />
+            <TableColumn fx:id="colsubject" prefWidth="96.0" text="Subject" />
+            <TableColumn fx:id="colstatues" prefWidth="112.0" text="Status" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnadd" layoutX="280.0" layoutY="378.0" mnemonicParsing="false" onAction="#add" prefHeight="40.0" prefWidth="127.0" style="-fx-background-color: f79d65;" text="add" textFill="PEACHPUFF" />
+      <Pane layoutX="-2.0" prefHeight="90.0" prefWidth="726.0" style="-fx-background-color: f79d65;">
+         <children>
+            <Label layoutX="259.0" layoutY="30.0" text="Attendence Taking" textFill="PEACHPUFF">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="90.0" prefHeight="395.0" prefWidth="71.0" style="-fx-background-color: #ffdab9;" />
+      <Button fx:id="btnupdate" layoutX="441.0" layoutY="378.0" mnemonicParsing="false" onAction="#update" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: f79d65;" text="Update" textFill="PEACHPUFF" />
+      <Button fx:id="btndelete" layoutX="584.0" layoutY="378.0" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: f79d65;" text="Delete" textFill="PEACHPUFF" />
+   </children>
+</AnchorPane>
